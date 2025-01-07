@@ -11,12 +11,12 @@ variable "aws_region" {
 variable "environment" {
   description = "Environment Variable"
   type        = string
-  default     = "test"
+  default     = "development"
 }
 
-# Business Division
-variable "business_division" {
-  description = "Business Division"
+# Owner
+variable "owner" {
+  description = "Owner"
   type        = string
   default     = "xinwei"
 }

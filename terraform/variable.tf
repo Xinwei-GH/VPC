@@ -58,12 +58,12 @@ variable "vpc_create_database_subnet_route_table" {
 variable "vpc_enable_nat_gateway" {
   description = "Enable NAT Gateways for Private Subnets Outbound Communication"
   type        = bool
-  default     = true
+  default     = false # Set to false because i want to have unique tag for my nat gateway so i manually create NAT Gateways with Unique Tags
 }
 
 # VPC Single NAT Gateway (True or False)
 variable "vpc_single_nat_gateway" {
   description = "Single NAT Gateway in one Availability Zone"
   type        = bool
-  default     = False
+  default     = false  #If this is false, the module creates one NAT Gateway per availability zone (for redundancy)
 }
